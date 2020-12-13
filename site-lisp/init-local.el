@@ -1,6 +1,14 @@
-(message "loading init-local.el")
+;;; package -- Summary
+;;; Commentary:
+;;; Code:
 
-(require 'package)
+(message "loading site-lisp/init-local.el")
+
+;; ;; Disable org’s ELPA packages
+;; (setq package-load-list '(all
+;;                           (org nil)))
+;; (add-to-list 'package-archives '("org" . "https://orgmode.org/elpa/") t)
+
 
 (unless (package-installed-p 'use-package)
   (package-refresh-contents)
@@ -36,13 +44,6 @@
 ;; Time
 (setq display-time-default-load-average nil)
 (display-time-mode 1)
-
-;; Disable org’s ELPA packages
-(setq package-load-list '(all
-                          (org nil)))
-
-;; org-elpa
-(add-to-list 'package-archives '("org" . "https://orgmode.org/elpa/") t)
 
 
 (provide 'init-local)
