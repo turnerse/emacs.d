@@ -4,7 +4,16 @@
 
 (message "loading site-lisp/init-local.el")
 
-;; ;; Disable org’s ELPA packages
+;; show changes to file in the sidebar
+(if (display-graphic-p)
+    (use-package git-gutter-fringe
+      :ensure t
+      :init (global-git-gutter-mode))
+  (use-package git-gutter
+    :ensure t
+    :init (global-git-gutter-mode)))
+
+;; ;; Disable org’s ELPA packages fd
 ;; (setq package-load-list '(all
 ;;                           (org nil)))
 ;; (add-to-list 'package-archives '("org" . "https://orgmode.org/elpa/") t)
