@@ -13,12 +13,6 @@
     :ensure t
     :init (global-git-gutter-mode)))
 
-;; ;; Disable org’s ELPA packages fd
-;; (setq package-load-list '(all
-;;                           (org nil)))
-;; (add-to-list 'package-archives '("org" . "https://orgmode.org/elpa/") t)
-
-
 (unless (package-installed-p 'use-package)
   (package-refresh-contents)
   (package-install 'use-package))
