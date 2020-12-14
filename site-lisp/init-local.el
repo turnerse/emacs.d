@@ -69,6 +69,13 @@
 ;; read https://www.reddit.com/r/orgmode/comments/dgm4da/zettelkästen_hacker_news/f3e0jbb
 (use-package helm-org-ql)
 
+
+(require 'org-gcal)
+(setq org-gcal-client-id "158847240586-92fg4lrhq2vjugbho0h4dl0fga9p2jup.apps.googleusercontent.com"
+      org-gcal-client-secret "nyCEtr4T9-vDN2y9s4aeWWrr"
+      org-gcal-file-alist '(("turnerse@gmail.com" .  "~/org/gcal.org")
+                            ))
+
 ;; keybindings
 (global-set-key (kbd "C-x C-r") 'counsel-recentf)
 
